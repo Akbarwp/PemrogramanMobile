@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pertemuan8.MovieDetailActivity"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgFotoDetail"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@color/black"/>
+
+    <TextView
+        android:id="@+id/txJudulDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Judul Detail"
+        app:layout_constraintStart_toEndOf="@+id/imgFotoDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"/>
+
+    <TextView
+        android:id="@+id/txReleaseDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Release Date Detail"
+        app:layout_constraintStart_toEndOf="@+id/imgFotoDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txJudulDetail"
+        app:layout_constraintHorizontal_bias="0.113"/>
+
+    <TextView
+        android:id="@+id/txDeskripsiDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:text="Description Detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgFotoDetail"/>
+
+    <TextView
+        android:id="@+id/txReviewDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review Detail"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txDeskripsiDetail"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
