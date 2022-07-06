@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "248408688021",
+    "project_id": "pemrograman-mobile-bc282",
+    "storage_bucket": "pemrograman-mobile-bc282.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248408688021:android:978a6cfc9b43ecec7d629c",
+        "android_client_info": {
+          "package_name": "com.example.pemrograman_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248408688021-tloigpso517muie0918087nm4l011mem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk7CgVsymQVtNa_ho0a7dsVzWeaWOxwh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248408688021-tloigpso517muie0918087nm4l011mem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

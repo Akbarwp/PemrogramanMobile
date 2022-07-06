@@ -13,9 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.pemrograman_mobile.R;
-import com.example.pemrograman_mobile.pertemuan8.MovieDetailActivity;
 
 import java.util.ArrayList;
+
+import io.opencensus.resource.Resource;
 
 // class untuk menampilkan data (list) sesuai layout item_list yang dibuat
 public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> {
@@ -73,7 +74,7 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
 
         // Deklarasi apa yang ada di XML item_list
         private ImageView posterMovies;
-        private TextView releaseMovie, descMovie, titleMovie, reviewMovie;
+        private TextView releaseMovie, descMovie, titleMovie;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -84,17 +85,28 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
             descMovie = itemView.findViewById(R.id.descriptionMovies);
 
             // event onClick untuk list (req: buat 1 activity baru --> halaman detail)
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //Isi yang ditampilkan di halamn 2 sesuai dengan gambar/data yang dipilih
-                    int i = getBindingAdapterPosition();
-                    PojoMovies movies = getListMovie().get(i);
+            itemView.setOnClickListener(view -> {
+                //Isi yang ditampilkan di halamn 2 sesuai dengan gambar/data yang dipilih
 
-                    Intent movieDetail = new Intent(itemView.getContext(), MovieDetailActivity.class);
-                    itemView.getContext().startActivities(new Intent[]{movieDetail});
-                }
+                // Mengambil index/posisi dari baris RecycleView
+                int i = getBindingAdapterPosition();
+
+                // Mengambil data index melalui Pojo
+                PojoMovies movies = getListMovie().get(i);
+                movies.setTitle(movies.getTitle());
+                movies.setDesc(movies.getDesc());
+                movies.setReleaseDate(movies.getReleaseDate());
+
+                // Pindah halaman ke detail activity
+                Intent movieDetail = new Intent(itemView.getContext(), MovieDetailActivity.class);
+
+                // Kirim data dari intent ke halaman detail (data --> class parcelable/Pojo)
+                movieDetail.putExtra(MovieDetailActivity.EXTRA_MOVIE, movies);
+
+                context.startActivities(new Intent[]{movieDetail});
+                // itemView.getContext().startActivities(new Intent[]{movieDetail});
             });
+
         }
     }
 }

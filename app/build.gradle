@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -38,8 +39,10 @@ dependencies {
     // Glider
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-//    implementation 'androidx.room:room-compiler-processing-testing:2.4.2'
+    // implementation 'androidx.room:room-compiler-processing-testing:2.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // Firebase
+    implementation 'com.google.firebase:firebase-firestore:21.4.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
     // Material Design 3
     implementation 'com.google.android.material:material:1.6.1'

@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pertemuan10.TvDetailActivity">
+    tools:context=".pertemuan10.TvDetailActivity"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imgFotoDetailTv"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        tools:srcCompat="@color/black"/>
+
+    <TextView
+        android:id="@+id/txJudulDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="21dp"
+        android:textStyle="bold"
+        android:text="judul_detail"
+        android:layout_toEndOf="@+id/imgFotoDetailTv"/>
+
+    <TextView
+        android:id="@+id/txReleaseDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="21dp"
+        android:text="release_date_detail"
+        android:layout_toEndOf="@+id/imgFotoDetailTv"
+        android:layout_below="@+id/txJudulDetailTv"/>
+
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:text="description"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/imgFotoDetailTv"/>
+
+    <TextView
+        android:id="@+id/txDeskripsiDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="24dp"
+        android:text="description_detail"
+        android:layout_below="@+id/deskripsi"/>
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="24dp"
+        android:text="review"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/txDeskripsiDetailTv"/>
+
+    <TextView
+        android:id="@+id/txReviewDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="review_detail"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="24dp"
+        android:layout_below="@+id/review"/>
+
+</RelativeLayout>

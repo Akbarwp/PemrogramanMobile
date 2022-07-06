@@ -87,11 +87,19 @@ public class tvAdapter extends RecyclerView.Adapter<tvAdapter.ViewHolder> {
                 @Override
                 public void onClick(View view) {
                     //Isi yang ditampilkan di halamn 2 sesuai dengan gambar/data yang dipilih
-                    int i = getAdapterPosition();
+                    int i = getBindingAdapterPosition();
+
                     PojoTv Tv = getlistTv().get(i);
+                    Tv.setTitle(Tv.getTitle());
+                    Tv.setDesc(Tv.getDesc());
+                    Tv.setReleaseDate(Tv.getReleaseDate());
 
                     Intent tvDetail = new Intent(itemView.getContext(), TvDetailActivity.class);
-                    itemView.getContext().startActivities(new Intent[]{tvDetail});
+
+                    tvDetail.putExtra(TvDetailActivity.EXTRA_TV, Tv);
+
+                    context.startActivities(new Intent[]{tvDetail});
+                    // itemView.getContext().startActivities(new Intent[]{tvDetail});
                 }
             });
         }

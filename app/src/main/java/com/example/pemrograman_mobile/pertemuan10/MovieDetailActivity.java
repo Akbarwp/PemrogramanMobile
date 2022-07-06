@@ -14,10 +14,10 @@ import com.example.pemrograman_mobile.R;
 
 public class MovieDetailActivity extends AppCompatActivity {
 
+    public static String EXTRA_MOVIE = "extra_movie";
+
     private ImageView imgFotoDetail;
     private TextView txJudulDetail, txReleaseDetail, txDeskripsiDetail, txReviewDetail;
-
-    public static String EXTRA_MOVIE = "extra_movie";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,8 @@ public class MovieDetailActivity extends AppCompatActivity {
 
         // Set gambar
         Glide.with(MovieDetailActivity.this).load(movies.getPoster())
-                .apply(new RequestOptions()).into(imgFotoDetail);
+                .apply(new RequestOptions().override(350,550))
+                .into(imgFotoDetail);
 
     }
 }
