@@ -14,6 +14,15 @@
         android:theme="@style/Theme.PemrogramanMobile"
         tools:targetApi="31">
         <activity
+            android:name=".pertemuan12.MainCatatan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".pertemuan11.CobaFloatingButton"
             android:exported="true">
             <intent-filter>
