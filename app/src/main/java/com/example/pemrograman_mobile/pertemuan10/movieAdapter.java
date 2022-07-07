@@ -16,8 +16,6 @@ import com.example.pemrograman_mobile.R;
 
 import java.util.ArrayList;
 
-import io.opencensus.resource.Resource;
-
 // class untuk menampilkan data (list) sesuai layout item_list yang dibuat
 public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> {
 
